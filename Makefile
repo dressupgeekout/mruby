@@ -5,7 +5,7 @@
 RAKE = ruby ./minirake
 
 all :
-	$(RAKE)
+	$(RAKE) -v
 .PHONY : all
 
 test : all

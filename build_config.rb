@@ -1,9 +1,12 @@
 MRuby::Build.new do |conf|
   toolchain :gcc
 
+  conf.gembox 'default'
+  conf.gem :github => 'iij/mruby-dir'
+
   conf.cc do |cc|
     cc.command = "/usr/bin/gcc"
-    end
+  end
 
   conf.linker do |linker|
     linker.command = "/usr/bin/gcc"
@@ -18,6 +21,7 @@ MRuby::CrossBuild.new('cosmos-lwm') do |conf|
   toolchain :gcc
 
   conf.gembox 'default'
+  conf.gem :github => 'iij/mruby-dir'
 
   conf.cc do |cc|
     cc.command = `hcrun --host cosmos:lwm printenv | awk -F= '$1 == "CC" { print }' | sed s,CC=,,`.chomp

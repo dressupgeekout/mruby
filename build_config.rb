@@ -25,6 +25,7 @@ MRuby::CrossBuild.new('cosmos-lwm') do |conf|
   conf.gem :github => 'iij/mruby-env'
   conf.gem :github => 'iij/mruby-errno'
   conf.gem :github => 'iij/mruby-iijson'
+  conf.gem :github => 'iij/mruby-mtest'
   conf.gem :github => 'iij/mruby-pack'
   conf.gem :github => 'iij/mruby-process'
   conf.gem :github => 'iij/mruby-tempfile'

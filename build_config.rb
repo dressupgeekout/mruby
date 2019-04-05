@@ -22,6 +22,12 @@ MRuby::CrossBuild.new('cosmos-lwm') do |conf|
 
   conf.gembox 'default'
   conf.gem :github => 'iij/mruby-dir'
+  conf.gem :github => 'iij/mruby-env'
+  conf.gem :github => 'iij/mruby-errno'
+  conf.gem :github => 'iij/mruby-iijson'
+  conf.gem :github => 'iij/mruby-pack'
+  conf.gem :github => 'iij/mruby-process'
+  conf.gem :github => 'iij/mruby-tempfile'
 
   conf.cc do |cc|
     cc.command = `hcrun --host cosmos:lwm printenv | awk -F= '$1 == "CC" { print }' | sed s,CC=,,`.chomp
